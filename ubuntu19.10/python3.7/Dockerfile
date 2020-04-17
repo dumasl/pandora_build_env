@@ -14,8 +14,9 @@ RUN pip3 install --upgrade virtualenv
 
 RUN apt-get install -y gdal-bin libgdal-dev
 
-RUN apt-get clean && \
-  rm -rf /var/lib/apt/lists*
-
 # opencv dependencies
 RUN apt-get install -y libsm6 libxrender1 libxext6
+
+# clean up
+RUN apt-get clean && \
+  rm -rf /var/lib/apt/lists*
