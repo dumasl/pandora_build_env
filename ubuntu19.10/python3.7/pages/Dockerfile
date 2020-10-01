@@ -6,4 +6,4 @@ RUN pip3 install ipython sphinx sphinx_rtd_theme sphinx_autoapi
 
 ##
 # env latex for sphinx
-RUN apt-get install -y texlive-full
+RUN apt-get update && apt-get install -y texlive-full
